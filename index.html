@@ -7,100 +7,12 @@
 <style>
 body {
     font-family: 'Segoe UI', sans-serif;
-    background: radial-gradient(circle at center, #1a1a2e, #0f0f1a);
+
+    background: radial-gradient(circle at 50% 30%, #1f3b73 0%, #0f172a 40%, #05070f 100%),
+                linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+
     color: #eee;
     padding: 20px;
-    position: relative;
-    z-index: 1;
-    animation: screenFlash 5s infinite;
-}
-
-.lightning {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.bolt {
-    position: absolute;
-    width: 6px;
-    height: 120%;
-    background: white;
-    opacity: 0;
-    filter: blur(1px);
-
-    clip-path: polygon(
-        50% 0%,
-        60% 10%,
-        40% 20%,
-        65% 30%,
-        35% 40%,
-        60% 50%,
-        45% 60%,
-        70% 70%,
-        40% 80%,
-        55% 90%,
-        50% 100%
-    );
-
-    box-shadow:
-        0 0 10px #fff,
-        0 0 20px #00d4ff,
-        0 0 30px #00d4ff;
-
-    animation: flash 4s infinite;
-}
-
-.bolt:nth-child(1) {
-    left: 15%;
-    animation-delay: 0s;
-}
-
-.bolt:nth-child(2) {
-    left: 45%;
-    animation-delay: 1.5s;
-    clip-path: polygon(
-        50% 0%,
-        30% 15%,
-        60% 30%,
-        35% 45%,
-        65% 60%,
-        40% 75%,
-        55% 100%
-    );
-}
-
-.bolt:nth-child(3) {
-    left: 75%;
-    animation-delay: 2.8s;
-    clip-path: polygon(
-        50% 0%,
-        70% 10%,
-        45% 25%,
-        75% 40%,
-        30% 55%,
-        60% 70%,
-        50% 100%
-    );
-}
-
-@keyframes flash {
-    0%   { opacity: 0; transform: scaleY(0); }
-    5%   { opacity: 1; transform: scaleY(1); }
-    8%   { opacity: 0.4; }
-    12%  { opacity: 1; }
-    18%  { opacity: 0; }
-    100% { opacity: 0; }
-}
-
-@keyframes screenFlash {
-    0%, 100% { background-color: rgba(255,255,255,0); }
-    4% { background-color: rgba(255,255,255,0.06); }
-    8% { background-color: rgba(0,212,255,0.05); }
 }
 
 h1 {
@@ -109,6 +21,7 @@ h1 {
     color: #f1c40f;
     text-shadow: 0 0 15px rgba(241,196,15,0.7);
     margin-bottom: 40px;
+    letter-spacing: 2px;
 }
 
 h2 {
@@ -126,16 +39,15 @@ h2 {
 }
 
 .match {
-    background: linear-gradient(145deg, #1f1f2e, #2c2c3e);
-    border: 1px solid #444;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255,255,255,0.1);
     border-radius: 12px;
     padding: 15px 25px;
     min-width: 180px;
     text-align: center;
     box-shadow: 0 0 15px rgba(0,0,0,0.6);
     transition: 0.3s;
-    position: relative;
-    z-index: 2;
 }
 
 .match:hover {
@@ -144,7 +56,7 @@ h2 {
 }
 
 .vs {
-    color: #888;
+    color: #aaa;
     margin: 5px 0;
 }
 
@@ -154,31 +66,26 @@ h2 {
 
 .final {
     border-left: 5px solid #f1c40f;
-    background: linear-gradient(145deg, #3a2c00, #1f1600);
+    background: rgba(241,196,15,0.1);
     font-weight: bold;
 }
 
+/* Final Arena */
 .final-arena {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 .final-arena .match {
     display: inline-block;
     font-size: 20px;
     padding: 25px 40px;
-    box-shadow: 0 0 40px rgba(241,196,15,1);
+    box-shadow: 0 0 40px rgba(241,196,15,0.9);
 }
 </style>
 </head>
 
 <body>
-
-<div class="lightning">
-    <div class="bolt"></div>
-    <div class="bolt"></div>
-    <div class="bolt"></div>
-</div>
 
 <h1>🏆 BRISCOLA ARENA</h1>
 
