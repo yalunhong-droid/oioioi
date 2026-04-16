@@ -68,13 +68,16 @@ h2 {
 .quarter { border-left-color: #9b59b6; }
 .semi { border-left-color: #e67e22; }
 
-/* ===== 决赛卡牌 ===== */
+/* 决赛卡牌 */
 .final {
     position: relative;
     overflow: hidden;
     border-left-color: #f1c40f;
     font-weight: bold;
     box-shadow: 0 0 40px rgba(241,196,15,0.6);
+    display: inline-block;
+    font-size: 20px;
+    padding: 25px 40px;
 }
 
 .final-video {
@@ -97,19 +100,13 @@ h2 {
     margin-top: 50px;
 }
 
-.final-arena .match {
-    display: inline-block;
-    font-size: 20px;
-    padding: 25px 40px;
-}
-
 </style>
 </head>
 
 <body>
 
 <video class="bg-video" autoplay muted loop playsinline>
-    <source src="Storm clouds,Lightning,NO Copyright,無料映像素材,閃電背景素材,Free Background Video-Download Free Footage.mp4">
+    <source src="Storm clouds.mp4">
 </video>
 
 <h1>🏆 BRISCOLA ARENA</h1>
@@ -118,6 +115,23 @@ h2 {
 <div class="arena-section">
     <div class="match group">A1<div class="vs">VS</div>A2</div>
     <div class="match group">A3<div class="vs">VS</div>A4</div>
+
+    <div class="match group">B1<div class="vs">VS</div>B2</div>
+    <div class="match group">B3<div class="vs">VS</div>B4</div>
+
+    <div class="match group">C1<div class="vs">VS</div>C2</div>
+    <div class="match group">C3<div class="vs">VS</div>C4</div>
+
+    <div class="match group">D1<div class="vs">VS</div>D2</div>
+    <div class="match group">D3<div class="vs">VS</div>D4</div>
+</div>
+
+<h2>Quarti di Finale</h2>
+<div class="arena-section">
+    <div class="match quarter">1A<div class="vs">VS</div>2B</div>
+    <div class="match quarter">1B<div class="vs">VS</div>2A</div>
+    <div class="match quarter">1C<div class="vs">VS</div>2D</div>
+    <div class="match quarter">1D<div class="vs">VS</div>2C</div>
 </div>
 
 <h2>Semifinali</h2>
@@ -127,6 +141,7 @@ h2 {
 </div>
 
 <div class="final-arena">
+
     <div class="match final">
 
         <video autoplay muted loop playsinline class="final-video">
@@ -140,6 +155,7 @@ h2 {
         </div>
 
     </div>
+
 </div>
 
 </body>
